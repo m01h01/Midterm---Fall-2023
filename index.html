@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Note</title>
+    <link rel="stylesheet" href="style.css"> <!--Reference styleSheet-->
+</head>
+<body>
+    <div class="container">
+        <h1>Note-Taking</h1>
+        <div class="input-container">
+            <!--I make it to textarea as it expand vertically with scrollling bar to accomodate the crowded content when needed-->
+            <textarea type="text" id="note" placeholder="Type in your note"> </textarea>
+            <button id="addNote">Add Note</button>
+        </div>
+        <ul id="noteList"></ul>
+    </div>
+    <script src="./script.js"></script><!--attach the script source-->
+</body>
+</html>
+<!--
+                4. A brief document explaining how your app works and any optional enhancements you added.
+
+    This is a note-taking web application with a functional implementation of the ability to add, edit, and delete notes. 
+    Here's a summary of what my code does:
+
+ -It maintains a list of notes in the notesArray array.
+
+ -The addNote function is responsible for adding new notes to the array and updating the displayed list of notes with word validation up to 500 words only. 
+  It clears the input field after adding a note.
+
+ -The sortNote function sorts the notes in the array, clears the note list, and displays the sorted notes. 
+  It also attaches event listeners for the "Edit" buttons, “Save” button after sorting.
+
+ -The EventFuntion function handles the click events of the "Edit", "Save" and “Delete” buttons within each note. 
+  It enables users to edit notes, save changes and delete the notes. 
+  It also maintains the currentIndex, which is clicked by the user and set it equal to editIndex to keep track of which note is being edited.
+  After the “Save” button is clicked, calling the sortNote function to make sure all notes displayed in alphabetical order. 
+
+ -The code sets up an initial display of notes by calling sortNote after adding a click event listener to the "Add" button.
+
+-->
